@@ -99,6 +99,7 @@
 </button>
 
 {#if showDialog}
+  <!-- svelte-ignore a11y_interactive_supports_focus -->
   <div
     class="garnet-dialog"
     bind:this={dialogElement}
@@ -109,7 +110,7 @@
     onkeydown={handleKeydown}
   >
     {#if showBackground}
-      <div id="background" aria-hidden="true" />
+      <div id="background" aria-hidden="true" ></div>
     {/if}
     <div data-testid="modal" id="modal">
       <div class="header">
