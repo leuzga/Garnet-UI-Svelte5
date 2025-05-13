@@ -6,12 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build-sb": "storybook build -o dist",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "test": "npx vitest",
     "coverage": "npx vitest --coverage",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o dist",
     "regen:code-docs": "node .fttemplates/scripts/regen-code-docs.js",
     "regen:svelte": "node .fttemplates/scripts/regen-svelte.js",
     "regen:stories": "node .fttemplates/scripts/regen-stories.js",
