@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Breadcrumbs (simulated) > get a snapshot of component 1`] = `
+"
+      <nav class="breadcrumbs-container" aria-label="breadcrumbs">
+        <ol class="breadcrumbs-list">
+          
+              <li class="breadcrumbs-item ">
+                <a href="/" class="breadcrumbs-link" data-testid="breadcrumbLink">
+                    
+                    <span>Dashboard</span>
+                  </a>
+                <span class="breadcrumbs-divider" aria-hidden="true">/</span>
+              </li>
+            
+              <li class="breadcrumbs-item ">
+                <a href="/reports" class="breadcrumbs-link" data-testid="breadcrumbLink">
+                    
+                    <span>Annual reports</span>
+                  </a>
+                <span class="breadcrumbs-divider" aria-hidden="true">/</span>
+              </li>
+            
+              <li class="breadcrumbs-item breadcrumbs-item-active">
+                <span class="breadcrumbs-current">2019</span>
+                
+              </li>
+            
+        </ol>
+      </nav>
+    "
+`;

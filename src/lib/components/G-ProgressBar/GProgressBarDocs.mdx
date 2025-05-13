@@ -1,0 +1,94 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as ProgressBarStories from './ProgressBar.stories.js';
+
+<Meta of={ProgressBarStories} />
+
+<Title />
+
+<Description of={ProgressBarStories} />
+
+ProgressBar is a visual component that displays progress information with optional animation. It has two possible display states.
+
+## Contents
+
+- [Default](#default)
+- [Label Outside](#label-outside)
+- [No Animation](#no-animation)
+- [High Precision](#high-precision)
+- [Component Properties](#component-properties)
+- [Usage](#usage)
+- [Behavior](#behavior)
+- [Design Considerations](#design-considerations)
+
+## Default
+
+This is the default for our ProgressBar component, with the label and percentage inside the bar:
+
+<Primary />
+
+## Label Outside
+
+This is set to show the label outside of the ProgressBar field component:
+
+<Canvas of={ProgressBarStories.LabelOutside} />
+
+## No Animation
+
+A version of the progress bar that updates without animation:
+
+<Canvas of={ProgressBarStories.NoAnimation} />
+
+## High Precision
+
+Demonstrating the progress value with decimal precision:
+
+<Canvas of={ProgressBarStories.HighPrecision} />
+
+## Component Properties
+
+<Controls />
+
+## Usage
+
+```svelte
+<ProgressBar 
+  progressAmt={65} 
+  color="#733635"
+  precision={0}
+  tweenDuration={400}
+  animate={true}
+  labelInside={true}
+  labelTextOutside="Progress"
+/>
+```
+
+As a Web Component:
+
+```html
+<garnet-progressbar 
+  progressAmt="65" 
+  color="#733635"
+  labelInside="true"
+  labelTextOutside="Progress">
+</garnet-progressbar>
+```
+
+## Behavior
+
+The ProgressBar component:
+- Animates smoothly between progress values when `animate` is true
+- Provides visual feedback through a color-filled bar that grows according to the progress percentage
+- Displays the progress percentage, optionally with decimal precision
+- Supports two different layout modes: label inside or outside the bar
+- Implements ARIA attributes for accessibility
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Rounded corners for a modern appearance
+- Smooth transitions to enhance user experience
+- Flexible color customization
+- Accessible design with proper contrast ratios
+- Responsive layout that adapts to different container sizes
+- Support for both animated and immediate updates

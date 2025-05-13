@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for SelectBox (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="select-container ">
+        <button class="select-trigger" data-testid="selectdropdown" aria-haspopup="listbox" aria-expanded="false">
+          <span class="select-value">
+            aaa
+          </span>
+          <span class="select-icon">▼</span>
+        </button>
+        
+      </div>
+    "
+`;

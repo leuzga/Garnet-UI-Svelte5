@@ -1,0 +1,84 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import { ArgTypes } from "@storybook/blocks";
+import * as SwitchStories from "./Switch.stories";
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+The Switch component allows users to toggle between two states, providing a visual way to turn settings on or off with a sliding interaction.
+
+## Component Variations
+
+Switch offers several variations to suit different use cases:
+
+- [Default](#default)
+- [Disabled](#disabled)
+- [Checked](#checked)
+- [Small](#small)
+- [No Label](#no-label)
+
+## Default
+
+This is the default state of the Switch component:
+
+<Canvas of={SwitchStories.Default} />
+
+## Disabled
+
+This is the disabled state for our Switch component:
+
+<Canvas of={SwitchStories.Disabled} />
+
+## Checked
+
+This is the checked state for our Switch component:
+
+<Canvas of={SwitchStories.Checked} />
+
+## Small
+
+This is the small size version of our Switch component:
+
+<Canvas of={SwitchStories.Small} />
+
+## No Label
+
+This is the Switch component without a text label:
+
+<Canvas of={SwitchStories.NoLabel} />
+
+## Properties of component
+
+Below is a list of arguments available for this component:
+
+<ArgTypes of={SwitchStories} />
+
+## Usage
+
+```svelte
+<Switch 
+  id="my-switch"
+  label="Enable feature"
+  isChecked={false}
+  disabled={false}
+  size=""
+  css=""
+  onchange={(event) => handleChange(event)}
+/>
+```
+
+## Behavior
+
+The Switch component provides a visual toggle that allows users to turn options on or off. It displays a slider that moves from one side to another when clicked, indicating the current state. The component is keyboard accessible and can be toggled using space or enter keys when focused.
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Subtle elevation and shadow effects when appropriate
+- Smooth transitions to enhance user experience
+- Responsive design that adapts to different screen sizes
+- Clear visual indication of the current state through color changes
+- Multiple size options to fit various UI contexts
+- Accessible design with appropriate focus indicators

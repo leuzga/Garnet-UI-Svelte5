@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Switch (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="switch-container ">
+        <label class="switch-label">
+          <input type="checkbox" class="switch-input" role="switch" aria-checked="false" data-testid="switch-input">
+          <span class="switch-slider "></span>
+          <span class="switch-text">Disabled switch with label</span>
+        </label>
+      </div>
+    "
+`;

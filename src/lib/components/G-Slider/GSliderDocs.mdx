@@ -1,0 +1,31 @@
+import {Canvas, Meta, Story} from "@storybook/blocks";
+import * as SliderStories from "./Slider.stories";
+
+<Meta of={SliderStories} />
+
+# Slider
+
+Slider is the primary component. It has three possible states.
+
+- [Default](#text)
+- [Disabled](#disabled)
+- [Step](#step)
+
+## Default
+
+This is the default state for the Slider component:
+
+<Canvas of={SliderStories.Default} />
+[See component details in  Storybook](/story/garnet-ui-library-basic-components-slider--default)
+## Step
+
+This is the Slider component using a step value of 25, and with ticks set to true:
+
+<Canvas of={SliderStories.Step} />
+[See component details in  Storybook](/story/garnet-ui-library-basic-components-slider--step)
+## Disabled
+
+This is the Slider component when disabled:
+
+<Canvas of={SliderStories.Disabled} />
+[See component details in  Storybook](/story/garnet-ui-library-basic-components-slider--disabled)

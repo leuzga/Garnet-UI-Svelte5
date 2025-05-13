@@ -1,0 +1,85 @@
+import { Meta, Canvas, Source } from '@storybook/blocks';
+import * as ChipStories from './Chip.stories';
+import ChipSource from './Chip.svelte?raw';
+
+<Meta title="Garnet UI Library/Navigation Components/Chip/Code Implementation" />
+
+# Chip Component Implementation
+
+This document outlines the code implementation details of the Chip component.
+
+## Component Structure
+
+The Chip component is built with Svelte 5, utilizing the new runes API for reactive state and props management. It implements a web component with the tag name `garnet-chip`.
+
+## Source Code
+
+<Source
+  language="svelte"
+  code={ChipSource}
+  dark
+/>
+
+## Key Implementation Notes
+
+### Custom Element Definition
+
+```svelte
+<svelte:options customElement="garnet-chip" />
+```
+
+The component is defined as a web component that can be used as `<garnet-chip>` in any HTML context.
+
+### Props Handling
+
+The component uses Svelte 5's `$props()` rune to handle properties:
+
+```svelte
+let {
+  active = $bindable(true),
+  close = false,
+  chipContent = "",
+  selected = false,
+  outline = false,
+  onclose
+} = $props();
+```
+
+### State Management
+
+- Uses `$state()` for internal reactive state
+- Implements `$effect()` for syncing props with internal state
+- The `active` prop is `$bindable` for bidirectional binding
+
+### Accessibility Features
+
+The component includes comprehensive accessibility features:
+
+1. **ARIA attributes**:
+   - `role="group"` on the chip container
+   - `aria-label` for descriptive labeling
+   - `aria-hidden="true"` for decorative elements
+
+2. **Keyboard & screen reader support**:
+   - Semantic `<button>` for close action
+   - Descriptive labels for button action
+   - Proper title attributes for tooltips
+
+### Event Handling
+
+```svelte
+function onClose(e) {
+  internalActive = false;
+  active = false;
+  onclose?.(e);
+}
+```
+
+The component uses Svelte 5's native event syntax with property callbacks, replacing the traditional event dispatcher pattern.
+
+### Styling
+
+- Applies conditional classes using Svelte's `class:` directive
+- Implements rounded design with `border-radius: 50%` for the close button
+- Uses CSS variables for maintainable theme colors
+- Provides outline variant through CSS modifiers

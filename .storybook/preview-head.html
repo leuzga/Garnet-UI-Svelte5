@@ -1,0 +1,37 @@
+<!-- Estilos para mejorar la altura del contenedor -->
+<style>
+  /* Estilos para asegurar que los canvas tengan suficiente altura */
+  .docs-story, 
+  .sb-canvas {
+    min-height: -webkit-fill-available !important;
+  }
+
+  /* Estilos para los contenedores de historias */
+.sb-story {
+    min-height: 30vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available !important;
+    width: 50vw !important;
+}
+
+  /* Estilos para los iframes */
+  iframe.sb-iframe {
+    min-height: -webkit-fill-available !important;
+    height: -webkit-fill-available !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Eliminar márgenes y padding excesivos */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

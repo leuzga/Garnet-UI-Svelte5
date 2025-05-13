@@ -1,0 +1,71 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+The Tooltip component provides contextual information or additional guidance when users hover or focus on an interactive element.
+
+## Default
+
+This is the default state of the Tooltip component:
+
+<Canvas of={TooltipStories.Default} />
+
+## Custom HTML
+
+This variant allows HTML content to be displayed within the tooltip for enhanced formatting:
+
+<Canvas of={TooltipStories.CustomHTML} />
+
+## Tooltip Position
+
+The tooltip can be positioned in different directions relative to the trigger button:
+
+<Canvas of={TooltipStories.TopPosition} />
+
+## Custom Button
+
+The trigger button can be customized with different text and accessible labels:
+
+<Canvas of={TooltipStories.CustomButton} />
+
+## Component Properties
+
+<Controls />
+
+## Usage
+
+```svelte
+<Tooltip 
+  tip="This is helpful information"
+  label="Additional details"
+  position="bottom"
+  showHTML={false}
+  timeout="400"
+/>
+```
+
+## Behavior
+
+The Tooltip component appears when users hover or focus on the trigger button. It includes a configurable delay for both showing and hiding to prevent accidental triggering. The tooltip can be dismissed by pressing Escape, clicking elsewhere, or moving focus away from the trigger.
+
+## Accessibility
+
+This component follows WCAG accessibility guidelines with:
+
+- Full keyboard navigation support
+- Proper ARIA attributes (aria-expanded, aria-describedby)
+- Support for screen readers
+- Respect for user motion preferences
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Subtle elevation and shadow effects
+- Smooth transitions to enhance user experience
+- Responsive design that adapts to different screen sizes
+- Directional indicators that point to the trigger element
+- Support for dark mode through prefers-color-scheme

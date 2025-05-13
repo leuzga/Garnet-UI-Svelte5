@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Dialog (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="dialog-wrapper">
+        <button class="dialog-trigger-button">Show dialog</button>
+        
+      </div>
+    "
+`;

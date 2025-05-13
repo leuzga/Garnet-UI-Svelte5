@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Tooltip (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="tooltip-container">
+        <button class="tooltip-trigger" aria-describedby="tooltip-content" data-testid="tooltipButton">
+          more info
+        </button>
+        <div id="tooltip-content" class="tooltip-content top hidden" role="tooltip" hidden="">
+          <span>This is an informational tooltip - to learn more click here</span>
+        </div>
+      </div>
+    "
+`;

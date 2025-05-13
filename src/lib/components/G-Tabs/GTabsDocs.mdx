@@ -1,0 +1,99 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+The Tabs component allows users to navigate between different content sections with a tabbed interface. It supports horizontal and vertical orientations, with optional iconography for enhanced visual clarity.
+
+## Contents
+
+- [Default](#default)
+- [Component Properties](#component-properties)
+- [Usage](#usage)
+- [Behavior](#behavior)
+- [Design Considerations](#design-considerations)
+- [Examples](#examples)
+  - [With Lucide Icons](#with-lucide-icons)
+  - [With Material Icons](#with-material-icons)
+  - [Vertical Orientation with Icons](#vertical-orientation-with-icons)
+  - [Partial Icons (Not all tabs have icons)](#partial-icons-not-all-tabs-have-icons)
+- [Icons Array Structure](#icons-array-structure)
+
+## Default
+
+This is the default state of the Tabs component:
+
+<Canvas of={TabsStories.Default} />
+
+## Component Properties
+
+{/* Controls without 'of' uses the Meta context */}
+<Controls />
+
+## Usage
+
+```svelte
+<Tabs 
+  bind:activeTabValue={currentTab}
+  items={tabData}
+  vertical={false}
+  icons={[
+    { family: "lucide", name: "home" },
+    { family: "lucide", name: "user" },
+    { family: "lucide", name: "settings" }
+  ]}
+  iconSize="1.2em"
+/>
+```
+
+## Behavior
+
+The Tabs component:
+- Allows single tab selection with keyboard and mouse support
+- Supports ARIA roles for accessibility
+- Can be displayed in horizontal (default) or vertical orientation
+- Accepts optional icons for each tab through the `icons` array
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Uses color palette: `#4c237f` for text and `#c5edfb` for backgrounds/borders
+- Subtle elevation and shadow effects when appropriate
+- Smooth transitions to enhance user experience
+- Responsive design that adapts to different screen sizes
+
+## Examples
+
+### With Lucide Icons
+
+<Canvas of={TabsStories.WithLucideIcons} />
+
+### With Material Icons
+
+<Canvas of={TabsStories.WithMaterialIcons} />
+
+### Vertical Orientation with Icons
+
+<Canvas of={TabsStories.VerticalWithIcons} />
+
+### Partial Icons (Not all tabs have icons)
+
+<Canvas of={TabsStories.PartialIcons} />
+
+## Icons Array Structure
+
+The `icons` prop accepts an array of objects with the following structure:
+
+```javascript
+[
+  { family: "lucide", name: "home" },      // Tab 0
+  { family: "material-symbols", name: "person" }, // Tab 1
+  null,                                    // Tab 2 - No icon
+  { family: "icon-park-solid", name: "settings" } // Tab 3
+]
+```
+
+The array index corresponds to the tab index. Use `null` for tabs without icons.

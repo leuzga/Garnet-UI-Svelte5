@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Tab 1", "text": "Text 1" },
+  { "id": 2, "name": "Tab 2", "text": "Text 2" },
+  { "id": 3, "name": "Tab 3", "text": "Text 3" },
+  { "id": 4, "name": "Tab 4", "text": "Text 4" },
+  { "id": 5, "name": "Tab 5", "text": "Text 5" }
+]

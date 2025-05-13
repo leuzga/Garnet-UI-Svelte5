@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Spinner (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="spinner-container" data-testid="spinner">
+        
+        <div class="spinner-circle" style="
+            width: 40px; 
+            height: 40px;
+            border-color: #733635 transparent transparent transparent;
+            animation-duration: 0.75s;
+          " role="status" aria-label="Loading"></div>
+      
+        <span class="spinner-sr-only">Loading...</span>
+      </div>
+    "
+`;

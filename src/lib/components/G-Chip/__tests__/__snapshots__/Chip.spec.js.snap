@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Chip (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="chip-container active  " data-testid="chip">
+        <span class="chip-content">Chip Text</span>
+        
+      </div>
+    "
+`;

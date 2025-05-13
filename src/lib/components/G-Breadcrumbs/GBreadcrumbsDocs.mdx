@@ -1,0 +1,102 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as BreadcrumbsStories from './Breadcrumbs.stories';
+
+<Meta of={BreadcrumbsStories} />
+
+# Breadcrumbs
+
+The Breadcrumbs component allows users to [brief description of what the component does].
+
+## Contents
+
+- [Default](#default)
+- [CustomImage](#customimage)
+- [CustomDivider](#customdivider)
+- [CustomText](#customtext)
+- [Component Properties](#component-properties)
+- [Usage](#usage)
+- [Breadcrumbs](#breadcrumbs)
+- [Functionality](#functionality)
+- [Usage](#usage-1)
+- [Design Considerations](#design-considerations)
+
+
+## Default
+
+This is the default state of the Breadcrumbs component:
+
+<Canvas of={BreadcrumbsStories.Default} />
+
+## CustomImage
+
+This is the CustomImage state of the Breadcrumbs component:
+
+<Canvas of={BreadcrumbsStories.CustomImage} />
+
+## CustomDivider
+
+This is the CustomDivider state of the Breadcrumbs component:
+
+<Canvas of={BreadcrumbsStories.CustomDivider} />
+
+## CustomText
+
+This is the CustomText state of the Breadcrumbs component:
+
+<Canvas of={BreadcrumbsStories.CustomText} />
+
+## Component Properties
+
+{/* Controls without 'of' uses the Meta context */}
+<Controls />
+
+## Usage
+
+```svelte
+<Breadcrumbs 
+  [example props]
+/>
+```
+
+## Breadcrumbs
+
+The Breadcrumbs component provides users with navigational context by displaying a hierarchical path of pages they have visited. It serves as a secondary navigation pattern that helps users understand their current location within the application's structure and easily navigate back to previous levels.
+Features
+
+* Clear visual path showing the user's navigation history
+* Clickable links to previously visited pages
+* Customizable separator between navigation items
+* Option to include icons for enhanced visual cues
+* Accessible navigation with appropriate ARIA attributes
+
+## Functionality
+The Breadcrumbs component tracks and displays the user's journey through the application, enabling them to:
+
+Understand their current location in the application hierarchy
+Navigate back to higher-level pages with a single click
+Maintain orientation within complex multi-level applications
+Reduce the number of steps needed to navigate between related sections
+
+## Usage
+The Breadcrumbs component is particularly useful in:
+
+* Multi-level navigation structures
+* Applications with hierarchical content organization
+* Dashboards or portals with multiple sections
+* E-commerce interfaces with category navigation
+* Document management systems
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+* Subtle elevation and shadow effects when appropriate
+* Smooth transitions to enhance user experience
+* Responsive design that adapts to different screen sizes
+* Consistent spacing between breadcrumb items for improved readability
+* Limited color palette to maintain visual hierarchy
+* Clear visual distinction between active and clickable items
+* Compact presentation to minimize vertical space consumption
+* Truncation of long item names on smaller screens
+* High contrast ratios to ensure accessibility
+* Appropriate hover and focus states for interactive elements

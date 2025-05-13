@@ -1,0 +1,138 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as ChipStories from './Chip.stories';
+
+<Meta of={ChipStories} />
+
+# Chip
+
+The Chip component allows users to display compact elements that represent an input, attribute, or action. They can be used for tags, categories, filters, or selections with optional close functionality.
+
+## Default
+
+The basic form of the Chip component:
+
+<Canvas of={ChipStories.Default} />
+
+## With Icon
+
+Chips can include an icon on the left side:
+
+<Canvas of={ChipStories.WithIcon} />
+
+## With Icon and Close Button
+
+Combining icon with dismissible behavior:
+
+<Canvas of={ChipStories.WithIconAndClose} />
+
+## With Close Button
+
+Chips can include a close button for dismissible actions:
+
+<Canvas of={ChipStories.WithCloseButton} />
+
+## Outline Style
+
+You can display chips with an outline variant:
+
+<Canvas of={ChipStories.OutlineStyle} />
+
+## Selected State
+
+Chips can show a selected state for multi-select scenarios:
+
+<Canvas of={ChipStories.Selected} />
+
+## All Features Combined
+
+An example showing all chip features together:
+
+<Canvas of={ChipStories.AllFeatures} />
+
+## Component Properties
+
+<Controls />
+
+## Usage
+
+```svelte
+<!-- Basic chip -->
+<Chip chipContent="Category" />
+
+<!-- Chip with icon -->
+<Chip 
+  chipContent="Beer"
+  iconFamily="icon-park-solid"
+  iconName="beer-mug"
+/>
+
+<!-- Chip with icon and close button -->
+<Chip 
+  chipContent="Removable beer tag"
+  iconFamily="icon-park-solid"
+  iconName="beer-mug"
+  close={true}
+  onclose={(e) => handleClose(e)}
+/>
+
+<!-- Icon with custom size -->
+<Chip 
+  chipContent="Large icon"
+  iconFamily="icon-park-solid"
+  iconName="beer-mug"
+  iconSize="1.5em"
+/>
+
+<!-- Chip with close button -->
+<Chip 
+  chipContent="Removable Tag"
+  close={true}
+  onclose={(e) => handleClose(e)}
+/>
+
+<!-- Selected chip -->
+<Chip 
+  chipContent="Selected Item"
+  selected={true}
+/>
+
+<!-- Outline style -->
+<Chip 
+  chipContent="Outline Style"
+  outline={true}
+/>
+
+<!-- Full featured chip -->
+<Chip 
+  chipContent="Complete Chip"
+  close={true}
+  selected={true}
+  outline={false}
+  onclose={(e) => console.log('Chip closed:', e)}
+/>
+```
+
+## Behavior
+
+The Chip component provides the following functionalities:
+
+- Compact display of information or selections
+- Optional close button for removal actions
+- Visual feedback for selected state
+- Support for accessibility standards
+- Smooth transitions for hover and active states
+
+- Optional Iconify icons on the left side
+- Flexible icon sizing with `iconSize` prop
+- Icons automatically align with text
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Compact, rounded design for easy recognition
+- Clear visual hierarchy between states (default, selected, outline)
+- Accessible close button with proper ARIA attributes
+- Smooth transitions to enhance user experience
+- Flexible content to accommodate various text lengths
+- Optional outline style for visual variety

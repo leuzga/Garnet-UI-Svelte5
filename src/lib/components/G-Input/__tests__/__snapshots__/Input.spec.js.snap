@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Input (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="input-container garnet">
+        
+        <input type="text" id="Input" class="input-field" placeholder="example text" value="" role="textbox" data-testid="input-field">
+      </div>
+    "
+`;

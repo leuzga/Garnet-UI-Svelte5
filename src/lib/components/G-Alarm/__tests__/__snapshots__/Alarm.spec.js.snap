@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Alarm (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="alarm" data-testid="alarm-1">
+        <button class="alarm-button ">
+          <span class="alarm-label">Alarm with label</span>
+          <span class="alarm-notification-badge" data-testid="notifications">
+            23
+          </span>
+        </button>
+      </div>
+    "
+`;

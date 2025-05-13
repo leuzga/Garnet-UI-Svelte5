@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for RadioButton (simulated) > get a snapshot of component 1`] = `
+"
+      <fieldset class="radio-group" role="radiogroup" aria-labelledby="radio-legend">
+        <legend id="radio-legend" class="radio-legend">RadioButton Group</legend>
+        <div class="radio-options">
+          
+            <div class="radio-option">
+              <input type="radio" id="option1" name="radioGroup" value="1" class="radio-input" data-testid="radio-option1">
+              <label for="option1" class="radio-label">Option 1</label>
+            </div>
+          
+            <div class="radio-option">
+              <input type="radio" id="option2" name="radioGroup" value="2" class="radio-input" data-testid="radio-option2">
+              <label for="option2" class="radio-label">Option 2</label>
+            </div>
+          
+            <div class="radio-option">
+              <input type="radio" id="option3" name="radioGroup" value="3" class="radio-input" data-testid="radio-option3">
+              <label for="option3" class="radio-label">Option 3</label>
+            </div>
+          
+        </div>
+      </fieldset>
+    "
+`;

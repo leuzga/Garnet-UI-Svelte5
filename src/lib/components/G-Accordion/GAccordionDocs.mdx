@@ -1,0 +1,45 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+The Accordion component allows users to expand and collapse content sections.
+
+## Default
+
+This is the default state of the Accordion component:
+
+<Canvas of={AccordionStories.Default} height="30vh" />
+
+## Component Properties
+
+{/* Controls without 'of' uses the Meta context */}
+<Controls />
+
+## Usage
+
+```svelte
+<Accordion 
+  isOpen={false} 
+  data={[
+    { title: "Heading 1", text: "Sample text content for heading 1" },
+    { title: "Heading 2", text: "Sample text content for heading 2" },
+    { title: "Heading 3", text: "Sample text content for heading 3" }
+  ]} 
+/>
+```
+
+## Behavior
+
+The Accordion component facilitates organization of content in collapsible sections.
+Each section can be expanded or collapsed independently.
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Subtle elevation and shadow effects when expanding sections
+- Smooth transitions to enhance user experience
+- Responsive design that adapts to different screen sizes

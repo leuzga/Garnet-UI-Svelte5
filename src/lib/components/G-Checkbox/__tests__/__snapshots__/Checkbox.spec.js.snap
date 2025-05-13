@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Checkbox (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="checkbox-container garnet">
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="Checkbox" class="checkbox-input" data-testid="checkbox-input" role="checkbox" aria-checked="false">
+          <label for="Checkbox" class="checkbox-label">
+            <span class="checkbox-mark"></span>
+            
+          </label>
+        </div>
+      </div>
+    "
+`;

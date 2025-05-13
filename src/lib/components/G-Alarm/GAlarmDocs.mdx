@@ -1,0 +1,44 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description, Stories } from '@storybook/blocks';
+import * as AlarmStories from './Alarm.stories';
+
+<Meta of={AlarmStories} />
+
+# Alarm
+
+The Alarm component allows users to display notification counters with a bell icon that animates to attract attention.
+
+## Component Variations
+
+<Stories includePrimary={true} title="" />
+
+## Component Properties
+
+{/* Controls without 'of' uses the Meta context */}
+<Controls />
+
+## Usage
+
+```svelte
+<Alarm 
+  notifications={23}
+  label="Notifications"
+  countColor="#733635"
+  countBackgroundColor="#f4f4f4"
+  filled={false}
+  small={false}
+/>
+```
+
+## Behavior
+
+The Alarm component displays a notification count alongside a bell icon. When there are notifications present, the bell icon animates with a gentle ringing effect to draw attention. The component can be configured to show different visual states through props like `filled` and `small`, and the appearance can be customized with color props.
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Subtle elevation and shadow effects when appropriate
+- Smooth transitions to enhance user experience
+- Responsive design that adapts to different screen sizes
+- Animated bell provides visual feedback when notifications are present
+- Clear visual hierarchy between the notification count and the bell icon

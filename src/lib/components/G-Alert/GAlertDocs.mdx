@@ -1,0 +1,107 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+
+The Alert component allows users to display notification messages with different levels of importance, including information, warnings, errors and success confirmations.
+
+## Contents
+
+- [Default](#default)
+- [Component Properties](#component-properties)
+- [Variants](#variants)
+  - [Warning Alert](#warning-alert)
+  - [Error Alert](#error-alert)
+  - [Success Alert](#success-alert)
+  - [Dark Alert](#dark-alert)
+  - [No Animation](#no-animation)
+  - [No Icon](#no-icon)
+- [Usage](#usage)
+- [Design Considerations](#design-considerations)
+
+## Default
+
+This is the default state of the Alert component with an informational message:
+
+<Canvas of={AlertStories.Default} />
+
+## Component Properties
+
+<Controls />
+
+## Variants
+
+### Warning Alert
+
+Display cautionary messages with the warning style:
+
+<Canvas of={AlertStories.Warn} />
+
+### Error Alert
+
+Display critical error messages with the error style:
+
+<Canvas of={AlertStories.Error} />
+
+### Success Alert
+
+Display confirmation of successful operations:
+
+<Canvas of={AlertStories.Success} />
+
+### Dark Alert
+
+A dark themed notification style:
+
+<Canvas of={AlertStories.Dark} />
+
+### No Animation
+
+Alert without entrance animation:
+
+<Canvas of={AlertStories.NoAnimation} />
+
+### No Icon
+
+Alert without any icon displayed:
+
+<Canvas of={AlertStories.NoIcon} />
+
+## Usage
+
+```svelte
+<Alert 
+  show={true}
+  type="info"
+  title="Information Title"
+  description="This is an important message"
+  showIcon={true}
+  showAnimation={true}
+/>
+```
+
+### The Alert component is particularly useful in:
+
+* Form validation feedback to display errors or success messages
+* System notifications about important events or status changes
+* Confirmation messages after user actions (save, delete, update)
+* Warning users about potential issues or consequences
+* Drawing attention to critical information that requires immediate awareness
+* Providing contextual help or tips in different states of an application
+* Displaying temporary status messages that automatically dismiss after viewing
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics
+
+* Color-coded visual system (blue for info, yellow for warnings, red for errors, green for success)
+* Consistent spacing between icon and text elements for improved readability
+* Animated appearance to draw appropriate attention without being jarring
+* Clear visual hierarchy between title and description content
+* Appropriate contrast ratios to ensure accessibility compliance
+* Compact presentation to minimize disruption to the main content
+* Responsive design that maintains legibility across device sizes
+* Intuitive dismissal mechanism through the close button
+* Visual reinforcement through carefully selected iconography

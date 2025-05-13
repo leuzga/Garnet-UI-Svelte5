@@ -1,0 +1,64 @@
+import { Meta, Canvas, Source } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+import TooltipSource from './Tooltip.svelte?raw';
+
+<Meta title="Components Code/G-Tooltip/Code Implementation" />
+
+# Tooltip Component Implementation
+
+This document outlines the code implementation details of the Tooltip component.
+
+## Component Sections
+
+A Svelte component consists of three main sections: Script (JavaScript), Template (HTML), and Style (CSS).
+
+## 1. Script (JavaScript)
+
+{/* Extraer y mostrar solo la parte de script */}
+<Source
+  language="javascript"
+  code={TooltipSource.match(/<script>([\s\S]*?)<\/script>/)?.[1] || '// No script section found'}
+  dark
+  format={true}
+  highlighter="prismjs"
+/>
+
+## 2. Template (HTML)
+
+{/* Extraer y mostrar solo la parte de template (todo lo que está fuera de <script> y <style>) */}
+<Source
+  language="html"
+  code={TooltipSource.replace(/<script>[\s\S]*?<\/script>/, '').replace(/<style>[\s\S]*?<\/style>/, '').trim()}
+  dark
+  format={true}
+  highlighter="prismjs"
+/>
+
+## 3. Style (CSS)
+
+{/* Extraer y mostrar solo la parte de style */}
+<Source
+  language="css"
+  code={TooltipSource.match(/<style>([\s\S]*?)<\/style>/)?.[1] || '/* No style section found */'}
+  dark
+  format={true}
+  highlighter="prismjs"
+/>
+
+## Key Implementation Notes
+
+### Props Handling
+
+The component uses Svelte 5's `$props()` rune to handle properties:
+
+<Source
+  language="javascript"
+  code={TooltipSource.match(/let\s*\{\s*([^}]*?)\s*\}\s*=\s*\$props\(\);/s)?.[1] ? 
+    `const { 
+${TooltipSource.match(/let\s*\{\s*([^}]*?)\s*\}\s*=\s*\$props\(\);/s)[1]}
+} = $props();` : 
+    `const { 
+  // No props found in component
+} = $props();`}
+  dark
+/>

@@ -1,0 +1,62 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import * as SpinnerStories from "./Spinner.stories";
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+The Spinner is a loading/progress component that indicates to the user that an action is in process. It has three animation variants available.
+
+- [Circle](#circle) - Circular rotation animation
+- [Jumper](#jumper) - Bounce effect animation
+- [Jellyfish](#jellyfish) - Undulating jellyfish-like effect
+- [Paused Animation](#paused-animation) - Example of paused animation
+
+## Circle
+
+This is the circle variant with a rotating animation:
+
+<Canvas of={SpinnerStories.Circle} />
+[See component details in  Storybook](/story/garnet-ui-library-action-components-g-spinner--circle)
+## Jumper
+
+This variant shows a bounce effect:
+
+<Canvas of={SpinnerStories.Jumper}  class="height: 85px;"/>
+[See component details in  Storybook](/story/garnet-ui-library-action-components-g-selectbox--jumper)
+## Jellyfish
+
+This variant shows a jellyfish-like undulating effect:
+
+<Canvas of={SpinnerStories.Jellyfish} />
+[See component details in  Storybook](/story/garnet-ui-library-action-components-g-selectbox--jellyfish)
+## Paused Animation
+
+Example of the animation paused using the `pause` prop:
+
+<Canvas of={SpinnerStories.PausedAnimation} />
+[See component details in  Storybook](/story/garnet-ui-library-action-components-g-selectbox--paused)
+
+## Properties
+
+<Controls />
+
+## Usage
+
+```svelte
+<script>
+  import Spinner from "./Spinner.svelte";
+</script>
+
+<!-- Circle Spinner -->
+<Spinner variant="circle" color="#733635" size="40" />
+
+<!-- Jumper Spinner -->
+<Spinner variant="jumper" color="#733635" duration="1s" size="60" />
+
+<!-- Jellyfish Spinner -->
+<Spinner variant="jellyfish" color="#733635" duration="2.5s" size="60" />
+
+<!-- Paused Animation -->
+<Spinner variant="jellyfish" color="#733635" duration="2.5s" size="60" pause={true} />
+```

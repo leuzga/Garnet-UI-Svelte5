@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for Tabs (simulated) > get a snapshot of component 1`] = `
+"
+      <div class="tabs-container" data-testid="tabs">
+        <div class="tabs-headers" role="tablist">
+          
+            <button id="tab-1" class="tab-header active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-testid="tab-header-0">
+              Tab 1
+            </button>
+          
+            <button id="tab-2" class="tab-header " role="tab" aria-selected="false" aria-controls="tab-panel-2" data-testid="tab-header-1">
+              Tab 2
+            </button>
+          
+            <button id="tab-3" class="tab-header " role="tab" aria-selected="false" aria-controls="tab-panel-3" data-testid="tab-header-2">
+              Tab 3
+            </button>
+          
+        </div>
+        <div class="tabs-content">
+          
+            <div id="tab-panel-1" class="tab-panel active" role="tabpanel" aria-labelledby="tab-1" data-testid="tab-panel-0">
+              This is a test
+            </div>
+          
+            <div id="tab-panel-2" class="tab-panel " role="tabpanel" aria-labelledby="tab-2" data-testid="tab-panel-1" hidden="">
+              Here is tab 2
+            </div>
+          
+            <div id="tab-panel-3" class="tab-panel " role="tabpanel" aria-labelledby="tab-3" data-testid="tab-panel-2" hidden="">
+              And this is tab 3
+            </div>
+          
+        </div>
+      </div>
+    "
+`;

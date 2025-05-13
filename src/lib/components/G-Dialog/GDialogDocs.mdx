@@ -1,0 +1,67 @@
+import { Meta, Canvas, Controls, Primary, Title, Subtitle, Description } from '@storybook/blocks';
+import * as DialogStories from './Dialog.stories';
+
+<Meta of={DialogStories} />
+
+# Dialog
+
+The Dialog component creates a modal overlay that displays important information requiring user attention or interaction. It presents content in a focused manner while temporarily disabling the main page.
+
+## Default
+
+This is the default state of the Dialog component:
+
+<Canvas of={DialogStories.Default} />
+
+## Variants
+
+### Closed On Open
+
+This variant shows the Dialog initially closed:
+
+<Canvas of={DialogStories.ClosedOnOpen} />
+
+### Without Background
+
+This variant displays the Dialog without a background overlay:
+
+<Canvas of={DialogStories.NoBackground} />
+
+## Component Properties
+
+<Controls />
+
+## Usage
+
+```svelte
+<Dialog 
+  showDialog={true}
+  showBackground={true}
+  modalTitle="Important Information"
+  modalText="This is an important message for the user."
+/>
+```
+
+## Behavior
+
+The Dialog component appears as an overlay on top of the main content. When opened, it focuses on the close button for keyboard accessibility. The dialog can be closed by clicking the X button, by pressing the Escape key, or by clicking the toggle button. It implements focus trapping to keep keyboard navigation within the dialog while it's open.
+
+## Accessibility
+
+The Dialog component follows WAI-ARIA guidelines for modal dialogs:
+
+- Uses `role="dialog"` with `aria-modal="true"` 
+- Properly labeled with `aria-labelledby` and `aria-describedby`
+- Manages keyboard focus appropriately
+- Supports keyboard navigation and Escape key for dismissal
+- Returns focus to the activating element when closed
+
+## Design Considerations
+
+This component follows Garnet UI's visual style, with the following characteristics:
+
+- Clean, minimal header with clear title and close button
+- Optional semi-transparent background overlay with blur effect
+- Smooth fade-in animation for better user experience
+- Centered positioning with appropriate elevation shadow
+- Responsive container that maintains readability
